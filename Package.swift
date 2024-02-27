@@ -18,15 +18,22 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/OperatorFoundation/Datable", branch: "main"),
         .package(url: "https://github.com/OperatorFoundation/SwiftHexTools", branch: "main"),
+        .package(url: "https://github.com/OperatorFoundation/Text", branch: "main"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Number"),
+            name: "Number",
+            dependencies: [
+                "Datable",
+                "Text",
+                "SwiftHexTools",
+            ]
+        ),
         .testTarget(
             name: "NumberTests",
             dependencies: ["Number"]),
-    ]
+    ],
     swiftLanguageVersions: [.v5]
 )

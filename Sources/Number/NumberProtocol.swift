@@ -7,13 +7,15 @@
 
 import Foundation
 
-public protocol Number:
+import Datable
+import Text
+
+public protocol NumberProtocol:
     Codable,
     Comparable,
     Equatable,
-    ExpressibleByStringLiteral,
     Hashable,
     MaybeDatable
 {
-    
+    func toText() -> Text
 }
