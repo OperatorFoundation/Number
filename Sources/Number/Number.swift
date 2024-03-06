@@ -679,3 +679,8 @@ public enum Number: NumberProtocol
         ""
     }
 }
+
+public enum NumberError: Error
+{
+    case conversionFailed
+}

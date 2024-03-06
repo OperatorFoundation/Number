@@ -18,4 +18,6 @@ public protocol NumberProtocol:
     MaybeDatable
 {
     func toText() -> Text
+    
+    func toInt() throws -> Int
 }
