@@ -676,7 +676,45 @@ public enum Number: NumberProtocol
 
     public func toText() -> Text
     {
-        ""
+        switch self
+        {
+            case .double(let rvalue):
+                return rvalue.string.text
+
+            case .float(let rvalue):
+                return String(rvalue).text
+
+            case .int(let rvalue):
+                return rvalue.string.text
+
+            case .int8(let rvalue):
+                return rvalue.string.text
+
+            case .int16(let rvalue):
+                return rvalue.string.text
+
+            case .int32(let rvalue):
+                return rvalue.string.text
+
+            case .int64(let rvalue):
+                return rvalue.string.text
+
+            case .uint(let rvalue):
+                return rvalue.string.text
+
+            case .uint8(let rvalue):
+                return rvalue.string.text
+
+            case .uint16(let rvalue):
+                return rvalue.string.text
+
+            case .uint32(let rvalue):
+                return rvalue.string.text
+
+            case .uint64(let rvalue):
+                return rvalue.string.text
+        }
+
     }
 }
 
