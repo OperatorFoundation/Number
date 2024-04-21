@@ -7,9 +7,6 @@
 
 import Foundation
 
-infix operator +
-infix operator -
-
 extension Number: AdditiveArithmetic
 {
     public static var zero: Number
