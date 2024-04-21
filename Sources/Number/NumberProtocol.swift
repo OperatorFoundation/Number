@@ -20,4 +20,6 @@ public protocol NumberProtocol:
     func toText() -> Text
     
     func toInt() throws -> Int
+
+//    func to(_ type: NumberType) -> Number
 }
